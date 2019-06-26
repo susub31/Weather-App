@@ -11,7 +11,7 @@ weatherForm.addEventListener('submit', (e) => {
     console.log('Getting weather for: '+search.value)
     messageOne.textContent = 'Getting weather for: '+search.value
 
-    locURL = 'http://localhost:3000/weather?address='+search.value
+    locURL = '/weather?address='+search.value
     fetch(locURL).then((response) => {
         response.json().then((data) => {
             console.log(data)
