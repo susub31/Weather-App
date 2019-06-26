@@ -66,7 +66,8 @@ app.get('/weather', (req, res) => {
     
             res.send({
                 location: location,
-                summary: forecastData.summary + "  It is currently " + forecastData.temperature + " degrees out.  There is " + forecastData.precipProb + "% chance of rain."               
+                summary: forecastData.summary + "  It is currently " + forecastData.temperature + " degrees out.  There is " + forecastData.precipProb + "% chance of rain.",
+                lowhightemp: "High for the day is " + forecastData.tempHigh + " and Low for the day is " + forecastData.tempLow + "."
             })
         })
     })   
